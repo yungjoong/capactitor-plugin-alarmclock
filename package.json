@@ -1,5 +1,5 @@
 {
-  "name": "capactitor-plugin-alarmclock",
+  "name": "@yungjoong/capactitor-plugin-alarmclock",
   "version": "0.0.1",
   "description": "안드로이드 알람시계 연동 플러그인",
   "main": "dist/plugin.cjs.js",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://example.com.git"
+    "url": "https://github.com/yungjoong/capactitor-plugin-alarmclock.git"
   },
   "bugs": {
     "url": "https://example.com/issues"
