@@ -40,14 +40,12 @@ echo(options: { value: string; }) => any
 ### createAlarm(...)
 
 ```typescript
-createAlarm(message: string, hour: number, minutes: number) => any
+createAlarm(options: { message: string; hour: number; minutes: number; }) => any
 ```
 
-| Param         | Type                |
-| ------------- | ------------------- |
-| **`message`** | <code>string</code> |
-| **`hour`**    | <code>number</code> |
-| **`minutes`** | <code>number</code> |
+| Param         | Type                                                             |
+| ------------- | ---------------------------------------------------------------- |
+| **`options`** | <code>{ message: string; hour: number; minutes: number; }</code> |
 
 **Returns:** <code>any</code>
 
@@ -57,13 +55,12 @@ createAlarm(message: string, hour: number, minutes: number) => any
 ### startTimer(...)
 
 ```typescript
-startTimer(message: string, seconds: number) => any
+startTimer(options: { message: string; seconds: number; }) => any
 ```
 
-| Param         | Type                |
-| ------------- | ------------------- |
-| **`message`** | <code>string</code> |
-| **`seconds`** | <code>number</code> |
+| Param         | Type                                               |
+| ------------- | -------------------------------------------------- |
+| **`options`** | <code>{ message: string; seconds: number; }</code> |
 
 **Returns:** <code>any</code>
 

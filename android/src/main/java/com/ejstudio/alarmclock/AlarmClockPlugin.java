@@ -6,10 +6,10 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "AlarmClock")
+@CapacitorPlugin(name = "AlarmClock3J")
 public class AlarmClockPlugin extends Plugin {
 
-    private AlarmClock implementation = new AlarmClock();
+    private AlarmClock3J implementation = new AlarmClock3J();
 
     @PluginMethod
     public void echo(PluginCall call) {
@@ -21,24 +21,33 @@ public class AlarmClockPlugin extends Plugin {
     }
 
     @PluginMethod
-    public void createAlarm(String message, int hour, int minutes) {
+    public void createAlarm(PluginCall call) {
+        String message = call.getString("message");
+        int hour = call.getInt("hour");
+        int minutes = call.getInt("minutes");
+
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
                 .putExtra(AlarmClock.EXTRA_MESSAGE, message)
                 .putExtra(AlarmClock.EXTRA_HOUR, hour)
                 .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            getActivity().startActivity(intent);
         }
+        call.resolve();
     }
 
     @PluginMethod
-    public void startTimer(String message, int seconds) {
+    public void startTimer(PluginCall call) {
+        String message = call.getString("message");
+        int seconds = call.getInt("seconds");
+
         Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER)
                 .putExtra(AlarmClock.EXTRA_MESSAGE, message)
                 .putExtra(AlarmClock.EXTRA_LENGTH, seconds)
                 .putExtra(AlarmClock.EXTRA_SKIP_UI, true);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            getActivity().startActivity(intent);
         }
+        call.resolve();
     }
 }
