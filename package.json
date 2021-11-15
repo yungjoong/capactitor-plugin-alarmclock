@@ -1,6 +1,6 @@
 {
   "name": "@yungjoong/capactitor-plugin-alarmclock",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "안드로이드 알람시계 연동 플러그인",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

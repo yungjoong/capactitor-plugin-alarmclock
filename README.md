@@ -14,6 +14,8 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`creatAlarm(...)`](#creatalarm)
+* [`startTimer(...)`](#starttimer)
 
 </docgen-index>
 
@@ -29,6 +31,39 @@ echo(options: { value: string; }) => any
 | Param         | Type                            |
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ value: string; }</code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### creatAlarm(...)
+
+```typescript
+creatAlarm(message: string, hour: number, minutes: number) => any
+```
+
+| Param         | Type                |
+| ------------- | ------------------- |
+| **`message`** | <code>string</code> |
+| **`hour`**    | <code>number</code> |
+| **`minutes`** | <code>number</code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### startTimer(...)
+
+```typescript
+startTimer(message: string, seconds: number) => any
+```
+
+| Param         | Type                |
+| ------------- | ------------------- |
+| **`message`** | <code>string</code> |
+| **`seconds`** | <code>number</code> |
 
 **Returns:** <code>any</code>
 
